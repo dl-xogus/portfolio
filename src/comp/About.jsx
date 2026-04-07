@@ -47,7 +47,7 @@ function About() {
                 <p className='text'>
                   저는 개발을 하면서 마주치는 문제를 단순히 해결하는 데서 끝내지 않고,<br />
                   왜 그런 문제가 발생했는지를 끝까지 <b className='point'>이해하려고 노력하는 개발자</b>입니다.<br /><br />
-                  <b className='point'>React</b>와 <b className='point'>Node.js</b>를 사용한 프로젝트를 진행하며 다양한 에러와 구조적인 문제를 경험했고,<br />
+                  <b className='point'>React.js</b>와 <b className='point'>Next.js</b>를 사용한 프로젝트를 진행하며 다양한 에러와 구조적인 문제를 경험했고,<br />
                   그 과정에서 <b className='point'>원인을 분석하고 해결하는 경험</b>을 꾸준히 쌓아왔습니다.<br /><br />
                   특히 에러를 해결하는 과정에서 얻은 지식을 기록하고, 같은 문제가 <b className='point'>다시 발생하지 않도록</b> 하는 것을 중요하게 생각합니다.<br /><br />
                   앞으로도 단순히 기능을 구현하는 개발자가 아니라,<br />
