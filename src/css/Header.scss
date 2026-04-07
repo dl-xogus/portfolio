@@ -1,14 +1,47 @@
 header {
-    background-color: #181818;
-    box-shadow: inset 0 -1px 0 #454545;
+    background-color: #1f1f1f;
     position: fixed;
     width: 100%;
     z-index: 9999;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+
+    .header-sub {
+        font-size: 12px;
+        font-family: 'Prentendard';
+        padding: 2px 20px;
+        display: flex;
+        gap: 5px;
+
+        .img-wrap {
+            width: 12px;
+            height: 12px;
+
+            > img {
+                width: 100%;
+            }
+        }
+
+        .html-ic {
+            display: flex;
+            align-items: flex-end;
+
+            &::before {
+                content: '';
+                background: url(../../public/imgs/ic-vscode-html.svg) no-repeat 0 0 / cover;
+                display: inline-block;
+                width: 13px;
+                height: 13px;
+                margin-right: 5px;
+            }
+        }
+    }
 }
 
 .header {
+    background-color: #181818;
     width: 100%;
     height: 40px;
+    box-shadow: inset 0 -1px 0 #454545;
     display: flex;
 
     nav {

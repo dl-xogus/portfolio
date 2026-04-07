@@ -91,45 +91,87 @@
         },
         {
                 "title": "웹 포트폴리오",
-                "thumb": "",
-                "intro": "",
+                "thumb": "./imgs/img-portfolio.jpg",
+                "simple_intro": "기술과 프로젝트를 보여주는 웹 포트폴리오",
+                "intro": "이 포트폴리오는 HTML 코드와 터미널 인터페이스를 컨셉으로 제작한 React 기반 웹 포트폴리오로, 개발자의 작업 환경을 시각적으로 표현하고 다양한 인터랙션을 통해 프로젝트와 개발 경험을 소개하도록 구현하였습니다.",
                 "url": "",
-                "github": "",
-                "period": "2026.00.00 ~ 2026.00.00",
-                "team": "",
+                "github": "https://github.com/dl-xogus/portfolio",
+                "period": "2026.03.27 ~ 진행중",
+                "team": "개인 프로젝트",
                 "contri": {
-                        "development": "0",
-                        "design": "0",
-                        "planning": "0"
+                        "development": "100",
+                        "design": "100",
+                        "planning": "100"
                 },
                 "stack": [
                         {
-                                "name": "",
-                                "icon": ""
+                                "name": "React.js",
+                                "icon": "./imgs/ic-react.svg"
+                        },
+                        {
+                                "name": "SCSS",
+                                "icon": "./imgs/ic-scss.svg"
+                        },
+                        {
+                                "name": "Figma",
+                                "icon": "./imgs/ic-figma.svg"
+                        },
+                        {
+                                "name": "GitHub",
+                                "icon": "./imgs/ic-github.svg"
+                        },
+                        {
+                                "name": "Git",
+                                "icon": "./imgs/ic-git.svg"
                         }
                 ],
                 "func": [
                         {
-                                "func_name": "",
-                                "detail": ""
+                                "func_name": "HTML 코드 컨셉의 UI 구성",
+                                "detail": "웹 페이지 전테를 HTML 코드 구조 처럼 구현하여 개발자의 작업 환경을 시각적으로 보여주도록 구현하였습니다."
+                        },
+                        {
+                                "func_name": "터미널 기반 Contact 기능",
+                                "detail": "터미널 UI를 구현하여 사용자가 help, info, phone, email, github 등의 명령어를 입력하면 연락처 정보를 확인할 수 있도록 하였습니다."
+                        },
+                        {
+                                "func_name": "React 기반 컴포넌트 구조 설계",
+                                "detail": "Hero, About, Skills, Projects, ProblemSolving 등의 섹션을 각각 컴포넌트로 분리하여 유지보수성과 재사용성을 높였습니다."
+                        },
+                        {
+                                "func_name": "프로젝트 상세 정보 인터랙션",
+                                "detail": "프로젝트 목록에서 상세 정보를 펼쳐볼 수 있도록 구현하여 사용자에게 프로젝트 설명과 개발 과정을 효과적으로 전달하도록 하였습니다."
+                        },
+                        {
+                                "func_name": "자동 스크롤 터미널 인터페이스",
+                                "detail": "명령어 입력 후 결과가 출력될 때 터미널 화면이 자동으로 스크롤되도록 구현하여 실제 터미널과 유사한 사용 경험을 제공하였습니다."
                         }
                 ],
                 "issue": [
                         {
-                                "problem": "",
-                                "solving": ""
+                                "problem": "터미널에서 명령어를 입력하면 메시지가 계속 추가되지만 화면이 자동으로 아래로 내려가지 않아 사용자가 직접 스크롤해야 하는 문제가 발생했습니다.",
+                                "solving": "useRef와 useEffect를 활용하여 메시지 배열이 변경될 때마다 스크롤 위치를 가장 아래로 이동하도록 구현했습니다."
+                        },
+                        {
+                                "problem": "터미널 입력창에서 안내 문구(placeholder)를 표시하면서도 클릭 시 input에 자연스럽게 포커스가 이동하도록 구현하는 과정에서 placeholder가 input 위에 겹치는 문제가 발생했습니다.",
+                                "solving": "placeholder를 실제 input 속성이 아닌 별도의 span 요소로 구현하고, input 값 여부와 포커스 상태를 state로 관리하여 표시 여부를 제어했습니다."
+                        },
+                        {
+                                "problem": "여러 명령어에 대해 각각 조건문을 작성하면 코드가 복잡해지고 유지보수가 어려워질 수 있었습니다.",
+                                "solving": "명령어와 출력 결과를 객체 형태로 관리하여 입력된 명령어에 따라 결과를 반환하도록 구조를 설계했습니다."
                         }
                 ],
-                "think": ""
+                "think": "웹 포트폴리오를 직접 기획하고 구현하는 과정에서 UI 설계부터 기능 구현, 문제 해결까지 전체 개발 과정을 경험할 수 있었습니다. 특히 React 기반 컴포넌트 구조 설계와 인터랙션 구현을 통해 코드 구조를 정리하는 방법과 사용자 경험을 고려한 개발의 중요성을 느낄 수 있었습니다."
         },
         {
                 "title": "프로젝트 제목",
                 "thumb": "",
-                "intro": "",
+                "simple_intro": "간단 소개글",
+                "intro": "프로젝트 소개글",
                 "url": "",
                 "github": "",
                 "period": "2026.00.00 ~ 2026.00.00",
-                "team": "",
+                "team": "팀/개인 프로젝트",
                 "contri": {
                         "development": "0",
                         "design": "0",
@@ -143,14 +185,14 @@
                 ],
                 "func": [
                         {
-                                "func_name": "",
-                                "detail": ""
+                                "func_name": "기능",
+                                "detail": "기능 설명"
                         }
                 ],
                 "issue": [
                         {
-                                "problem": "",
-                                "solving": ""
+                                "problem": "문제",
+                                "solving": "해결"
                         }
                 ],
                 "think": ""

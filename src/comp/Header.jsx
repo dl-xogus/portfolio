@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import '../css/Header.scss'
 
-function Header({ showProjectsDetails }) {
-  const [lightOnTap, setlightOnTap] = useState(null);
+function Header() {
+  const [activeSection, setActiveSection] = useState("");
   const menu = [
     {
       name: "Home",
@@ -30,10 +30,6 @@ function Header({ showProjectsDetails }) {
     }
   ];
 
-  const toggle = (i) => {
-    setlightOnTap(lightOnTap === i ? null : i)
-  };
-
   const moveTop = () => {
     window.scrollTo({
       top: 0,
@@ -41,7 +37,6 @@ function Header({ showProjectsDetails }) {
     });
   };
 
-  const [activeSection, setActiveSection] = useState("");
   useEffect(() => {
     const sections = document.querySelectorAll(".part");
 
@@ -54,7 +49,7 @@ function Header({ showProjectsDetails }) {
         });
       },
       {
-        threshold: 0.5
+        threshold: 0.5    // 50% 이상 보일 때
       }
     );
 
@@ -71,22 +66,22 @@ function Header({ showProjectsDetails }) {
             <a key={i}
               className={activeSection === tab.id ? 'selected' : ''}
               href={`#${tab.id}`}
+              onClick={e => {
+                if (tab.name === 'Home') {
+                  e.preventDefault();
+                  moveTop();
+                }
+              }}
             >
               {tab.name}
             </a>
           ))}
-          {/* <a
-            className='selected'
-            href="#about"
-            onClick={() => { }}
-          >
-            About
-          </a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
-          <a href="#problem">Problem-Solving</a>
-          <a href="#contact">Contact</a> */}
         </nav>
+      </div>
+      <div className='header-sub'>
+        <p>taehyeon</p>
+        <p className='img-wrap'><img src="./imgs/ic-right.svg"/></p>
+        <p className='html-ic'>portfoilo</p>
       </div>
     </header>
   )

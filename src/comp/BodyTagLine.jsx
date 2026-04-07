@@ -7,8 +7,6 @@ import Projects from './Projects.jsx'
 import Skills from './Skills.jsx'
 
 function BodyTagLine({ projects, openProject, showProjectsDetails }) {
-
-
     return (
         <div className={`body-wrap ${showProjectsDetails ? 'open' : ''}`}>
             <p className='tag top-tag html'>
