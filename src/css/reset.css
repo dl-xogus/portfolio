@@ -1,0 +1,12 @@
+/* reset.css (태그 초기화) */
+body {
+    margin: 0;
+    font-family: 'Consolas', 'Pretendard';
+    background-color: #1F1F1F;
+    color: #CCCCCC;
+}
+* { box-sizing: border-box; }
+img { vertical-align: middle; }
+a {color: white; text-decoration: none;}
+h1, h2, h3, p, figure { margin: 0; }
+table { border-collapse: collapse; }

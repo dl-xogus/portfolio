@@ -1,0 +1,89 @@
+.projects {
+    margin: 140px auto;
+}
+
+.projects-section {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.obj {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    >.img-wrap {
+        width: 366px;
+        aspect-ratio: 16 / 9;
+        border-radius: 10px;
+        border: 1px solid #404040;
+        overflow: hidden;
+        background: url(../../public/imgs/img-noimage.jpg) no-repeat 0 0 / cover;
+        cursor: pointer;
+
+        >img {
+            width: 100%;
+            transition: 0.3s;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    .detail {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        cursor: default;
+
+        .project-name {
+            color: #9CDCFE;
+            font-size: 24px;
+            font-weight: bold;
+            width: max-content;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .vt {
+            display: flex;
+            gap: 20px;
+
+            >.pink {
+                cursor: pointer;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+
+                &::after {
+                    content: '';
+                    background: url(../../public/imgs/ic-linkout.svg) no-repeat 0 0 / cover;
+                    display: inline-block;
+                    width: 12px;
+                    height: 12px;
+                    margin-left: 5px;
+                }
+            }
+        }
+
+        .icons {
+            display: flex;
+            gap: 10px;
+
+            >p {
+                width: 30px;
+                aspect-ratio: 1 / 1;
+
+                >img {
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

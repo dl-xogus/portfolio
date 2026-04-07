@@ -1,0 +1,28 @@
+.contact-section {
+    padding: 10px 0;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    
+    .terOpenBtn {
+        font-weight: bold;
+        color: #cccccc;
+        background-color: #1f1f1f;
+        border: 1px solid #404040;
+        border-radius: 7px;
+        padding: 5px 10px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #333333;
+        }
+
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .terOpenBtn {
+        display: flex;
+    }
+}

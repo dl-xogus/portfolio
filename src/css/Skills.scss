@@ -1,0 +1,23 @@
+.skills {
+    margin: 140px auto;
+}
+
+.skills-figs {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    padding-top: 20px;
+    
+    >figure {
+        width: 150px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        padding: 20px 0;
+        background: linear-gradient(rgba(255, 255, 255, 0.01) 50%, rgba(255, 255, 255, 0.05) 100%);
+        box-shadow: rgba(0, 0, 0, 0.25) 0.25em 0.25em 1.75em;
+    }
+}

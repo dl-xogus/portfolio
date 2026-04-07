@@ -1,0 +1,254 @@
+.projectDetails {
+    z-index: 9999;
+    width: 950px;
+    font-family: 'Pretendard';
+    font-size: 16px;
+    font-weight: 200;
+    color: white;
+    transition: 0.5s;
+
+    .tap-name {
+        padding-left: 10px;
+    }
+
+    .side-inner {
+        transition: 0.5s;
+        width: 950px;
+        height: 100%;
+        background-color: #181818;
+        border-right: 1px solid #454545;
+        position: fixed;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            width: 18px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #4D4D4D;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+            border-left: 1px solid #06090C;
+            border-top: 1px solid #06090C;
+        }
+
+        .PD-topBar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+
+            .x {
+                cursor: pointer;
+            }
+        }
+
+        .pjs {
+            display: flex;
+            flex-direction: column;
+
+            .onetap {
+                display: flex;
+                flex-direction: column;
+
+                .parent {
+                    display: flex;
+                    justify-content: space-between;
+                    color: #E2C08D;
+                    cursor: pointer;
+                    padding: 5px 20px;
+
+                    &:hover {
+                        background-color: #2A2D2E;
+                    }
+
+                    .right-icon {
+                        display: flex;
+                        align-items: center;
+                        transition: 0.3s;
+
+                        &.active {
+                            transform: rotate(90deg);
+                        }
+                    }
+                }
+
+                .name {
+                    display: flex;
+                }
+
+                .right-icon {
+                    display: flex;
+                    align-items: center;
+                    transition: 0.3s;
+
+                    &.active {
+                        transform: rotate(90deg);
+                    }
+                }
+
+                /* tap안 내용 */
+                .sub {
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: 0.5s;
+
+                    .right-icon {
+                        display: flex;
+                        align-items: center;
+                        transform: rotate(90deg);
+                        transition: 0.3s;
+
+                        &.active {
+                            transform: rotate(0);
+                        }
+                    }
+
+                    &.tap-open {
+                        max-height: 3000px;
+                    }
+
+                    .title {
+                        color: #73C991;
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 5px 20px 5px 32px;
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: #2A2D2E;
+                        }
+
+                        >div {
+                            display: flex;
+                        }
+
+                        >p {
+                            color: rgba(115, 201, 145, 0.7);
+                        }
+
+                        .github-title {
+                            display: flex;
+                            align-items: center;
+                            padding-left: 10px;
+
+                            .img-wrap {
+                                width: 19px;
+                                height: 19px;
+
+                                >img {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+
+                    .inside {
+                        width: 100%;
+                        line-height: 160%;
+                        max-height: 500px;
+                        overflow: hidden;
+                        transition: 0.5s;
+                        padding: 10px 44px;
+
+                        &.tap-open {
+                            padding: 0 44px;
+                            max-height: 0;
+                        }
+                    }
+
+                    .link {
+                        color: #4493F8;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+
+                    .thumb {
+                        .thumb-img {
+                            width: 100%;
+                            border-radius: 10px;
+                            border: 1px solid #454545;
+                        }
+                    }
+
+                    .stack {
+                        >.inside {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+
+                            .img-wrap {
+                                width: 30px;
+                                height: 30px;
+                                display: flex;
+                                justify-content: center;
+
+                                >img {
+                                    height: 100%;
+                                }
+                            }
+
+                            >div {
+                                display: flex;
+                                gap: 10px;
+                            }
+                        }
+                    }
+
+                    .func {
+                        >.inside {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+
+                            .text {
+                                color: #cccccc;
+                                white-space: pre-line;
+                            }
+                        }
+                    }
+
+                    .issue {
+                        >.inside {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 20px;
+
+                            .is {
+                                display: flex;
+                                gap: 10px;
+
+                                .text {
+                                    flex: 1;
+
+                                    >span {
+                                        color: #8C8C8C;
+                                        font-family: 'Consolas';
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+
+                            .red {
+                                width: 30px;
+                                color: #FE616E;
+                            }
+
+                            .blue {
+                                color: #49A5F1;
+
+                                >span {
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

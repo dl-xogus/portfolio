@@ -1,0 +1,35 @@
+.body-wrap {
+    width: calc(100% - 40px);
+    position: absolute;
+    border-left: 1px solid #404040;
+    margin-left: 40px;
+    margin-top: 70px;
+    padding-bottom: 29px;
+
+
+    &.open {
+        width: calc(50% - 40px);
+    }
+    
+    .body-tag {
+        margin-left: 40px;
+        margin-top: 29px;
+        width: calc(100% - 40px);
+    }
+
+    .bot-tag {
+        position: absolute;
+        bottom: -19px;
+    }
+
+    .html {
+        position: absolute;
+        top: -19px;
+    }
+}
+
+.inner {
+    max-width: 1800px;
+    display: flex;
+    flex-direction: column;
+}

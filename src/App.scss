@@ -1,0 +1,95 @@
+body {
+    // overflow-x: hidden;
+}
+.App {
+    color: #cccccc;
+    display: flex;
+}
+
+
+.inner {
+    width: 90%;
+}
+
+.tag {
+    font-size: 1rem;
+    color: #808080;
+    
+    .angle {
+        color: #569CD6;
+    }
+}
+
+.tagAndDetail {
+    display: flex;
+    gap: 40px;
+}
+
+.tag-line {
+    border-left: 1px solid #404040;
+    position: relative;
+
+    .top-tag {
+        width: max-content;
+        position: absolute;
+        top: -19px;
+    }
+
+    .bot-tag {
+        position: absolute;
+        bottom: -19px;
+    }
+}
+
+.section-line {
+    width: calc(100vw - 60px);
+    height: 30px;
+    border: 1px solid #282828;
+    z-index: -1;
+    transform: translateX(-81px);
+}
+
+.nomal {
+    color: #cccccc;
+}
+
+.att {
+    color: #9CDCFE;
+}
+
+.note {
+    color: #6A9955;
+}
+
+.point {
+    color: #4FC3F7;
+}
+
+.gray {
+    color: #808080;
+}
+
+.orange {
+    color: #CE9178;
+}
+
+.pink {
+    color: #C586C0;
+}
+
+.text {
+    line-height: 160%;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding: 30px 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-align: start;
+}

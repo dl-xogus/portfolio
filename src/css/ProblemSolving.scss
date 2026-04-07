@@ -1,0 +1,47 @@
+.problem {
+    margin: 140px auto;
+
+    .att-tag {
+        top: -27px;
+        left: -22px;
+        cursor: pointer;
+
+        &::before {
+            content: '';
+            background: url(../../public/imgs/ic-right.svg) no-repeat 0 0 / cover;
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            margin-right: 10px;
+            transition: 0.3s;
+        }
+
+        &.active::before {
+            transform: rotate(90deg);
+        }
+    }
+
+    .ps {
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.5s;
+
+        &.open {
+            max-height: 1000px;
+            padding: 30px 0;
+        }
+    }
+}
+
+.problem-name {
+    font-size: 24px;
+}
+
+pre {
+  background: #111111 !important;
+  border-radius: 10px;
+}
+
+.problem-section {
+    padding: 40px 0;
+}

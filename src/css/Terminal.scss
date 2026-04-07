@@ -1,0 +1,168 @@
+.terminal {
+    position: fixed;
+    width: 100%;
+    height: 300px;
+    background-color: #181818;
+    border-top: 1px solid #454545;
+    bottom: 0;
+
+    .ter-topbar {
+        width: 100%;
+        background-color: #181818;
+        padding: 10px 20px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 12px;
+        font-family: 'Pretendard';
+        font-weight: 300;
+
+        .ter-tab {
+            padding: 5px 0;
+            border-bottom: 1px solid #0078D4;
+        }
+
+        .ter-icons {
+            display: flex;
+
+            div {
+                display: flex;
+                align-items: flex-end;
+                gap: 10px;
+            }
+
+            .powershell {
+                gap: 3px;
+
+                &::after {
+                    content: '|';
+                    padding: 0 10px;
+                    color: #727272;
+                }
+            }
+
+            .btn {
+                cursor: pointer;
+
+                
+            }
+        }
+    }
+
+    .ter-inner {
+        width: 100%;
+        height: calc(100% - 35px);
+        font-size: 14px;
+        padding-left: 10px;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            width: 18px;
+            transition: 1s;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #4D4D4D;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+            border-left: 1px solid #06090C;
+            border-top: 1px solid #06090C;
+        }
+
+        .ter-input {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            flex-shrink: 0;
+
+            &::before {
+                content: '';
+                background: url(../../public/imgs/ic-psdot.svg) no-repeat 0 0 / cover;
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                margin-right: 5px;
+            }
+
+
+
+            form {
+                flex: 1;
+                position: relative;
+
+                >p {
+                    width: 300px;
+                }
+
+                input {
+                    width: 100%;
+                    font-size: 14px;
+                    background-color: #181818;
+                    border: none;
+                    color: #F5F543;
+                    font-family: 'Consolas';
+
+                    &:focus {
+                        outline: none;
+                        border: none;
+                    }
+                }
+
+                .fake-Placeholder {
+                    width: max-content;
+                    font-size: 14px;
+                    color: #676767;
+                    font-style: italic;
+                    position: absolute;
+                    left: 5px;
+
+                    >span {
+                        width: max-content;
+                        color: #4DAAFC;
+                    }
+                }
+            }
+        }
+
+        .ter-msg {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .help {
+                .commands {
+                    display: flex;
+                    gap: 20px;
+                    padding-top: 20px;
+                }
+            }
+        }
+    }
+}
+
+.before-cmd {
+    padding-bottom: 20px;
+
+    &::before {
+        content: '';
+        background: url(../../public/imgs/ic-psdot.svg) no-repeat 0 0 / cover;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        margin-right: 5px;
+    }
+}
+
+.yellow {
+    color: #F5F543;
+}
+
+.ter-link {
+    color: #CCCCCC;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

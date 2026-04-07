@@ -1,0 +1,26 @@
+.hero {
+    margin: 300px auto;
+    position: relative;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 80px;
+    width: 1240px;
+
+    .title {
+        font-size: 4rem;
+
+        .point {
+            color: #569CD6;
+        }
+    }
+}
+
+@media (max-width: 1239px) {
+    .details {
+        max-width: 1000px;
+    }
+}
