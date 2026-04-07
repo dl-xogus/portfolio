@@ -6,7 +6,7 @@ import ProblemSolving from './ProblemSolving.jsx'
 import Projects from './Projects.jsx'
 import Skills from './Skills.jsx'
 
-function BodyTagLine({ projects, openProject, showProjectsDetails }) {
+function BodyTagLine({ projects, openProject, showProjectsDetails, setShowTerminal }) {
     return (
         <div className={`body-wrap ${showProjectsDetails ? 'open' : ''}`}>
             <p className='tag top-tag html'>
@@ -35,7 +35,7 @@ function BodyTagLine({ projects, openProject, showProjectsDetails }) {
                         openProject={openProject}
                     />
                     <ProblemSolving />
-                    <Contact />
+                    <Contact setShowTerminal={setShowTerminal}/>
                 </div>
             </div>
         </div>

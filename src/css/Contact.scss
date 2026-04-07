@@ -21,8 +21,8 @@
     }
 }
 
-@media screen and (max-width: 1280px) {
+@media (max-width: 1280px) {
     .terOpenBtn {
-        display: flex;
+        display: flex !important;
     }
 }

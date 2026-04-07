@@ -48,6 +48,7 @@ function App() {
         <Header />
         <div>
           <BodyTagLine
+            setShowTerminal={setShowTerminal}
             showProjectsDetails={showProjectsDetails}
             projects={projects}
             openProject={(index) => {

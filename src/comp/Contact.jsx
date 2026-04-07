@@ -1,6 +1,6 @@
 import '../css/Contact.scss'
 
-function Contact() {
+function Contact({ setShowTerminal }) {
     return (
         <section id='contact' className='part'>
             <div className='skills'>
@@ -34,7 +34,12 @@ function Contact() {
 
                         <section className='contact-section'>
                             <p>터미널을 열어 저에게 연락해보세요 (ctrl + j)</p>
-                            <button className='terOpenBtn'>OPEN</button>
+                            <button 
+                                className='terOpenBtn'
+                                onClick={() => setShowTerminal(true)}
+                            >
+                                OPEN
+                            </button>
                         </section>
                     </div>
                 </article>
