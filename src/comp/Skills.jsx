@@ -78,7 +78,7 @@ function Skills() {
                                     <div className='skills-figs'>
                                         {sk.item.map((item, j) => (
                                             <figure key={j}>
-                                                <p><img src={item.icon} /></p>
+                                                <p><img src={item.icon} alt='icon'/></p>
                                                 <figcaption>{item.name}</figcaption>
                                             </figure>
                                         ))}

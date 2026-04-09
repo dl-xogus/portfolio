@@ -122,13 +122,13 @@ function Terminal({ setShowTerminal }) {
                 <div className='ter-icons'>
                     <div>
                         <div className='powershell'>
-                            <p><img src="./imgs/ic-terminal.svg" /></p>
+                            <p><img src="./imgs/ic-terminal.svg" alt="icon"/></p>
                             <p>powershell</p>
                         </div>
                     </div>
 
                     <div className='ter-endIcs'>
-                        <p className="btn" onClick={() => setShowTerminal(false)}><img src="./imgs/ic-x.svg" /></p>
+                        <p className="btn" onClick={() => setShowTerminal(false)}><img src="./imgs/ic-x.svg" alt="icon"/></p>
                     </div>
                 </div>
             </div>

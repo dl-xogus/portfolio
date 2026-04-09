@@ -54,7 +54,7 @@ function Projects({ projects, openProject }) {
                   <p className='img-wrap'
                     onClick={() => openProject(i)}
                   >
-                    <img src={item.thumb} />
+                    <img src={item.thumb} alt="썸네일이미지"/>
                   </p>
 
                   <div className='detail'>
@@ -69,12 +69,12 @@ function Projects({ projects, openProject }) {
                       <small className='orange'>{item.team}</small>
                     </div>
                     <div className='vt'>
-                      <a className='pink' href={item.url} target="_blank">서비스 이동</a>
-                      <a className='pink' href={item.github} target="_blank">GitHub</a>
+                      <a className='pink' href={item.url} target="_blank" rel="noreferrer">서비스 이동</a>
+                      <a className='pink' href={item.github} target="_blank" rel="noreferrer">GitHub</a>
                     </div>
                     <div className='icons'>
                       {item.stack.map((ic, j) => (
-                        <p key={j}><img src={ic.icon} title={ic.name} /></p>
+                        <p key={j}><img src={ic.icon} title={ic.name} alt="기술스택"/></p>
                       ))}
 
                     </div>

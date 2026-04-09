@@ -80,7 +80,7 @@ function Header() {
       </div>
       <div className='header-sub'>
         <p>taehyeon</p>
-        <p className='img-wrap'><img src="./imgs/ic-right.svg"/></p>
+        <p className='img-wrap'><img src="./imgs/ic-right.svg" alt='icon'/></p>
         <p className='html-ic'>portfoilo</p>
       </div>
     </header>
