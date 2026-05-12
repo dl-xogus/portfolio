@@ -18,7 +18,8 @@ function Skills() {
                 { name: "Axios", icon: "./imgs/ic-axios.svg" },
                 { name: "Tailwind CSS", icon: "./imgs/ic-tailwindcss.svg" },
                 { name: "jQuery", icon: "./imgs/ic-jquery.svg" },
-                { name: "SCSS", icon: "./imgs/ic-scss.svg" }
+                { name: "SCSS", icon: "./imgs/ic-scss.svg" },
+                { name: "Zustand", icon: "./imgs/ic-zustand.svg" }
             ]
         },
         {

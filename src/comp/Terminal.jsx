@@ -58,7 +58,7 @@ function Terminal({ setShowTerminal }) {
             <div className="github">
                 <div>
                     <span>GitHub : </span>
-                    <a className="ter-link" href="https://github.com/dl-xogus" target="_blank">https://github.com/dl-xogus</a>
+                    <a className="ter-link" href="https://github.com/dl-xogus" target="_blank" rel="noreferrer">https://github.com/dl-xogus</a>
                 </div>
             </div>
         ),
@@ -77,7 +77,7 @@ function Terminal({ setShowTerminal }) {
                         <p>: Lee Taehyeon</p>
                         <p>: 010-8729-0576</p>
                         <p>: aaayoo12345@gmail.com</p>
-                        <p>: <a className="ter-link" href="https://github.com/dl-xogus" target="_blank">https://github.com/dl-xogus</a></p>
+                        <p>: <a className="ter-link" href="https://github.com/dl-xogus" target="_blank" rel="noreferrer">https://github.com/dl-xogus</a></p>
                     </div>
                 </div>
             </div>
@@ -157,7 +157,7 @@ function Terminal({ setShowTerminal }) {
                         <input
                             ref={inputRef}
                             value={cmd}
-                            onChange={(e) => { setCmd(e.target.value); setBool(true); if (e.target.value == '') setBool(false); }}
+                            onChange={(e) => { setCmd(e.target.value); setBool(true); if (e.target.value === '') setBool(false); }}
                             autoFocus
                         />
                     </form>

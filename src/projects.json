@@ -164,14 +164,14 @@
                 "think": "웹 포트폴리오를 직접 기획하고 구현하는 과정에서 UI 설계부터 기능 구현, 문제 해결까지 전체 개발 과정을 경험할 수 있었습니다. 특히 React 기반 컴포넌트 구조 설계와 인터랙션 구현을 통해 코드 구조를 정리하는 방법과 사용자 경험을 고려한 개발의 중요성을 느낄 수 있었습니다."
         },
         {
-                "title": "프로젝트 제목",
-                "thumb": "",
+                "title": "StorePilot",
+                "thumb": "./imgs/img-StorePilot.jpg",
                 "simple_intro": "간단 소개글",
                 "intro": "프로젝트 소개글",
-                "url": "",
-                "github": "",
-                "period": "2026.00.00 ~ 2026.00.00",
-                "team": "팀/개인 프로젝트",
+                "url": "https://kd-storepilot.vercel.app/",
+                "github": "https://github.com/dl-xogus/StorePilot",
+                "period": "2026.04.14 ~ 2026.05.08",
+                "team": "팀 프로젝트 (5명)",
                 "contri": {
                         "development": "0",
                         "design": "0",
@@ -179,22 +179,82 @@
                 },
                 "stack": [
                         {
-                                "name": "",
-                                "icon": ""
+                                "name": "Next.js",
+                                "icon": "./imgs/ic-nextjs.svg"
+                        },
+                        {
+                                "name": "SCSS",
+                                "icon": "./imgs/ic-scss.svg"
+                        },
+                        {
+                                "name": "MongoDB Atlas",
+                                "icon": "./imgs/ic-mongodb.svg"
+                        },
+                        {
+                                "name": "NextAuth",
+                                "icon": "./imgs/ic-nextauth.svg"
+                        },
+                        {
+                                "name": "Axios",
+                                "icon": "./imgs/ic-axios.svg"
+                        },
+                        {
+                                "name": "Zustand",
+                                "icon": "./imgs/ic-zustand.svg"
+                        },
+                        {
+                                "name": "Google AI Studio",
+                                "icon": "./imgs/ic-ai.svg"
+                        },
+                        {
+                                "name": "GitHub",
+                                "icon": "./imgs/ic-github.svg"
+                        },
+                        {
+                                "name": "Git",
+                                "icon": "./imgs/ic-git.svg"
+                        },
+                        {
+                                "name": "Figma",
+                                "icon": "./imgs/ic-figma.svg"
+                        },
+                        {
+                                "name": "Vercel",
+                                "icon": "./imgs/ic-vercel.svg"
                         }
                 ],
                 "func": [
                         {
-                                "func_name": "기능",
-                                "detail": "기능 설명"
+                                "func_name": "AI 챗봇 인터페이스",
+                                "detail": "자연어 기반 데이터 질문 기능 쉽고 빠른 정보 확인 사용자 친화적 AI 응답 제공"
+                        },
+                        {
+                                "func_name": "AI 매출 분석",
+                                "detail": "일/주/월 매출 데이터 분석 매출 비교 및 통계 확인 AI 기반 매출 분석 제공"
+                        },
+                        {
+                                "func_name": "AI 메뉴 관리",
+                                "detail": "메뉴 데이터 통합 관리 사용자 주문 화면 구성 AI 기반 메뉴 분석 제공"
+                        },
+                        {
+                                "func_name": "AI 직원 관리",
+                                "detail": "직원 스케줄 관리 기능 인건비 계산 및 관리 AI 기반 인건비 분석 제공"
                         }
                 ],
                 "issue": [
                         {
-                                "problem": "문제",
-                                "solving": "해결"
+                                "problem": "매출 추가 저장 후 팝업을 닫아도 목록에 반영되지 않았습니다. 부모의 salesData가 최초 마운트 시 한 번만 fetch되기 때문",
+                                "solving": "fetch 로직을 fetchSales() 함수로 분리하고 onSave prop으로 팝업에 전달, 저장 성공 후 onSave() 호출로 목록을 재조회 하였습니다."
+                        },
+                        {
+                                "problem": "두 컴포넌트가 각자 독립적인 상태를 가져 탭 전환 시 날짜 필터링 연동이 불가능했습니다.",
+                                "solving": "activeTab, selected, openDropdown 상태를 부모 컴포넌트(page.jsx)로 끌어올려 props로 전달, 탭 기준에 따른 필터링 및 드롭다운 비활성화 처리하였습니다."
+                        },
+                        {
+                                "problem": "일별/주별/월별 탭과 무관하게 항상 배열 인덱스 -7 위치 데이터와 비교해 주별/월별에서도 '지난주' 기준으로 잘못 계산되었습니다.",
+                                "solving": "getCompareItem 함수를 추가해 탭별로 날짜를 직접 계산 (일별 -7일, 주별 -1달, 월별 -1년), salesData.find()로 해당 날짜 데이터 탐색하도록 하였습니다."
                         }
                 ],
-                "think": ""
+                "think": "Next.js 풀스택 환경에서 SSR과 클라이언트 렌더링의 차이를 직접 부딪히며 이해할 수 있었고, 컴포넌트 간 상태 공유 문제를 해결하면서 초기 설계와 데이터 흐름의 중요성을 깨달았습니다. 외부 AI API 장애 상황에서 대안을 찾아 전환하는 과정을 통해 실제 서비스 개발에서의 유연한 대처 능력을 키울 수 있었습니다. 5인 팀 프로젝트로 브랜치 전략을 활용한 협업을 경험하며 사전 인터페이스 정의와 소통의 중요성을 배웠습니다."
         }
 ]

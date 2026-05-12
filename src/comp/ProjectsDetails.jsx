@@ -87,7 +87,7 @@ function ProjectsDetails({ projects, selectedProject, setshowProjectsDetails }) 
                                             <div>
                                                 <p className={`right-icon ${subOpen[`${i}-github`] ? 'active' : ''}`}><img src="./imgs/ic-right.svg" alt="icon"/></p>
                                                 <div className='github-title'>
-                                                    <p className='img-wrap'><img src="./imgs/ic-github.svg" /></p>
+                                                    <p className='img-wrap'><img src="./imgs/ic-github.svg" alt='icon'/></p>
                                                     <p className='tap-name'>GitHub</p>
                                                 </div>
                                             </div>
@@ -112,27 +112,31 @@ function ProjectsDetails({ projects, selectedProject, setshowProjectsDetails }) 
                                     </div>
 
                                     <div className='team'>
-                                        <div className='title'>
+                                        <div className='title'
+                                            onClick={() => toggleSub(i, "team")}
+                                        >
                                             <div>
-                                                <p className={`right-icon ${tapOpen === i ? 'active' : ''}`}><img src="./imgs/ic-right.svg" alt="icon"/></p>
+                                                <p className={`right-icon ${subOpen[`${i}-team`] ? 'active' : ''}`}><img src="./imgs/ic-right.svg" alt="icon"/></p>
                                                 <p className='tap-name'>👥 구성원</p>
                                             </div>
                                             <p>U</p>
                                         </div>
 
-                                        <p className='inside'>{item.team}</p>
+                                        <p className={`inside ${subOpen[`${i}-team`] ? 'tap-open' : ''}`}>{item.team}</p>
                                     </div>
 
                                     <div className='contri'>
-                                        <div className='title'>
+                                        <div className='title'
+                                            onClick={() => toggleSub(i, "contri")}
+                                        >
                                             <div>
-                                                <p className={`right-icon ${tapOpen === i ? 'active' : ''}`}><img src="./imgs/ic-right.svg" alt="icon"/></p>
+                                                <p className={`right-icon ${subOpen[`${i}-contri`] ? 'active' : ''}`}><img src="./imgs/ic-right.svg" alt="icon"/></p>
                                                 <p className='tap-name'>📌 기여도</p>
                                             </div>
                                             <p>U</p>
                                         </div>
 
-                                        <p className='inside'>
+                                        <p className={`inside ${subOpen[`${i}-contri`] ? 'tap-open' : ''}`}>
                                             개발: {item.contri.development}%<br />
                                             디자인: {item.contri.design}%<br />
                                             기획: {item.contri.planning}%
@@ -140,15 +144,17 @@ function ProjectsDetails({ projects, selectedProject, setshowProjectsDetails }) 
                                     </div>
 
                                     <div className='stack'>
-                                        <div className='title'>
+                                        <div className='title'
+                                            onClick={() => toggleSub(i, "stack")}
+                                        >
                                             <div>
-                                                <p className={`right-icon ${tapOpen === i ? 'active' : ''}`}><img src="./imgs/ic-right.svg" alt="icon"/></p>
+                                                <p className={`right-icon ${subOpen[`${i}-stack`] ? 'active' : ''}`}><img src="./imgs/ic-right.svg" alt="icon"/></p>
                                                 <p className='tap-name'>🛠️ 사용된 기술 스택</p>
                                             </div>
                                             <p>U</p>
                                         </div>
 
-                                        <div className='inside'>
+                                        <div className={`inside ${subOpen[`${i}-stack`] ? 'tap-open' : ''}`}>
                                             {item.stack.map((sk, i) => (
                                                 <div key={i}>
                                                     <p className='img-wrap'><img src={sk.icon} alt="기술스택"/></p>
@@ -159,15 +165,17 @@ function ProjectsDetails({ projects, selectedProject, setshowProjectsDetails }) 
                                     </div>
 
                                     <div className='func'>
-                                        <div className='title'>
+                                        <div className='title'
+                                            onClick={() => toggleSub(i, "func")}
+                                        >
                                             <div>
-                                                <p className={`right-icon ${tapOpen === i ? 'active' : ''}`}><img src="./imgs/ic-right.svg" alt="icon"/></p>
+                                                <p className={`right-icon ${subOpen[`${i}-func`] ? 'active' : ''}`}><img src="./imgs/ic-right.svg" alt="icon"/></p>
                                                 <p className='tap-name'>⚡ 주요 기능</p>
                                             </div>
                                             <p>U</p>
                                         </div>
 
-                                        <div className='inside'>
+                                        <div className={`inside ${subOpen[`${i}-func`] ? 'tap-open' : ''}`}>
                                             {item.func.map((fun, i) => (
                                                 <div key={i}>
                                                     <p>{i + 1}. {fun.func_name}</p>
@@ -178,15 +186,17 @@ function ProjectsDetails({ projects, selectedProject, setshowProjectsDetails }) 
                                     </div>
 
                                     <div className='issue'>
-                                        <div className='title'>
+                                        <div className='title'
+                                            onClick={() => toggleSub(i, "issue")}
+                                        >
                                             <div>
-                                                <p className={`right-icon ${tapOpen === i ? 'active' : ''}`}><img src="./imgs/ic-right.svg" alt="icon"/></p>
+                                                <p className={`right-icon ${subOpen[`${i}-issue`] ? 'active' : ''}`}><img src="./imgs/ic-right.svg" alt="icon"/></p>
                                                 <p className='tap-name'>💥 개발 이슈</p>
                                             </div>
                                             <p>U</p>
                                         </div>
 
-                                        <div className='inside'>
+                                        <div className={`inside ${subOpen[`${i}-issue`] ? 'tap-open' : ''}`}>
                                             {item.issue.map((isu, i) => (
                                                 <div key={i}>
                                                     <div className='is'>
@@ -203,15 +213,17 @@ function ProjectsDetails({ projects, selectedProject, setshowProjectsDetails }) 
                                     </div>
 
                                     <div className='think'>
-                                        <div className='title'>
+                                        <div className='title'
+                                            onClick={() => toggleSub(i, "think")}
+                                        >
                                             <div>
-                                                <p className={`right-icon ${tapOpen === i ? 'active' : ''}`}><img src="./imgs/ic-right.svg" alt="icon"/></p>
+                                                <p className={`right-icon ${subOpen[`${i}-think`] ? 'active' : ''}`}><img src="./imgs/ic-right.svg" alt="icon"/></p>
                                                 <p className='tap-name'>💭 개발 후 느낀점</p>
                                             </div>
                                             <p>U</p>
                                         </div>
 
-                                        <p className='inside'>{item.think}</p>
+                                        <p className={`inside ${subOpen[`${i}-think`] ? 'tap-open' : ''}`}>{item.think}</p>
                                     </div>
                                 </div>
                             }

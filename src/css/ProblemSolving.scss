@@ -27,7 +27,9 @@
         transition: 0.5s;
 
         &.open {
-            max-height: 1000px;
+            min-height: 0;
+            max-height: fit-content;
+            height: 100%;
             padding: 30px 0;
         }
     }
