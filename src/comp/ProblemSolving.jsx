@@ -22,6 +22,7 @@ providers.forEach((p) => {
     ottLogoOutput += \`<img src="\${img_path_logo + p.logo_path}">\`;
   }
 });`,
+
     code2: `useEffect(() => {
   const sections = document.querySelectorAll(".part");
 
@@ -42,17 +43,23 @@ providers.forEach((p) => {
 
   return () => observer.disconnect();
 }, []);`,
-    code3: `/* 케이스 A - 코드블록 감싸기: */
-\`{"summary": "...", "advice": "..."}\`
+
+    code3: `
+/* 케이스 A - 코드블록 감싸기: */
+\`\`\`json
+{\"summary\": \"...\", \"advice\": \"...\"}
+\`\`\`
 
 /* 케이스 B - 앞뒤 설명 텍스트 포함: */
-\`아래는 요청하신 분석 결과입니다.
-{"summary": "...", "advice": "..."}
-이상입니다.\`
+\"아래는 요청하신 분석 결과입니다.
+{\"summary\"\: \"...\", \"advice\"\: \"...\"}
+이상입니다.\"
 
 /* 케이스 C - 두 가지 혼합: */
-\`물론입니다!
-{"summary": "...", "advice": "..."}\``,
+\"물론입니다!
+{\"summary\": \"...\", \"advice\": \"...\"}\"
+`,
+
     code4: `const text = result.response.text().replace(/\`\`\`json|\`\`\`/g, '').trim();
 const jsonMatch = text.match(/\{(?:[^{}]|{[^{}]*})*\}/);`
   };

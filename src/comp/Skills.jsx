@@ -9,7 +9,8 @@ function Skills() {
                 { name: "CSS3", icon: "./imgs/ic-css.svg" },
                 { name: "Javascript", icon: "./imgs/ic-javascript.svg" },
                 { name: "React.js", icon: "./imgs/ic-react.svg" },
-                { name: "Next.js", icon: "./imgs/ic-nextjs.svg" }
+                { name: "Next.js", icon: "./imgs/ic-nextjs.svg" },
+                { name: "Vue", icon: "./imgs/ic-vue.svg" }
             ]
         },
         {
@@ -20,7 +21,8 @@ function Skills() {
                 { name: "jQuery", icon: "./imgs/ic-jquery.svg" },
                 { name: "SCSS", icon: "./imgs/ic-scss.svg" },
                 { name: "Zustand", icon: "./imgs/ic-zustand.svg" },
-                { name: "NextAuth", icon: "./imgs/ic-nextauth.svg" }
+                { name: "NextAuth", icon: "./imgs/ic-nextauth.svg" },
+                { name: "Pinia", icon: "./imgs/ic-pinia.svg" }
             ]
         },
         {
@@ -80,7 +82,7 @@ function Skills() {
                                     <div className='skills-figs'>
                                         {sk.item.map((item, j) => (
                                             <figure key={j}>
-                                                <p><img src={item.icon} alt='icon'/></p>
+                                                <p className='icon-wrap'><img src={item.icon} alt='icon'/></p>
                                                 <figcaption>{item.name}</figcaption>
                                             </figure>
                                         ))}

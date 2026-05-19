@@ -166,8 +166,8 @@
         {
                 "title": "StorePilot",
                 "thumb": "./imgs/img-StorePilot.jpg",
-                "simple_intro": "간단 소개글",
-                "intro": "프로젝트 소개글",
+                "simple_intro": "AI 기반 스마트 매장 운영 시스템",
+                "intro": "AI 기반 스마트 매장 관리 플랫폼. 매출, 메뉴, 재고, 직원 스케줄 데이터를 통합 관리하고 Gemma AI로 운영 인사이트를 제공하는 풀스택 웹 서비스입니다.",
                 "url": "https://kd-storepilot.vercel.app/",
                 "github": "https://github.com/dl-xogus/StorePilot",
                 "period": "2026.04.14 ~ 2026.05.08",
