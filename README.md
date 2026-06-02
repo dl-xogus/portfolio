@@ -4,7 +4,7 @@ HTML 코드 · 터미널 컨셉의 React 기반 개발자 포트폴리오
 
 ## 🌐 배포
 
-> 현재 배포 링크 없음 (로컬 실행)
+👉 **[https://taehyeon-portfolio.vercel.app/](https://taehyeon-portfolio.vercel.app/)**
 
 ## 📌 프로젝트 소개
 
