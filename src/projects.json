@@ -9,9 +9,9 @@
                 "period": "2026.01.31 ~ 2026.03.09",
                 "team": "팀 프로젝트 (3명)",
                 "contri": {
-                        "development": "0",
-                        "design": "0",
-                        "planning": "0"
+                        "development": "80",
+                        "design": "30",
+                        "planning": "50"
                 },
                 "stack": [
                         {
@@ -173,9 +173,9 @@
                 "period": "2026.04.14 ~ 2026.05.08",
                 "team": "팀 프로젝트 (5명)",
                 "contri": {
-                        "development": "0",
-                        "design": "0",
-                        "planning": "0"
+                        "development": "50",
+                        "design": "20",
+                        "planning": "30"
                 },
                 "stack": [
                         {
@@ -256,5 +256,107 @@
                         }
                 ],
                 "think": "Next.js 풀스택 환경에서 SSR과 클라이언트 렌더링의 차이를 직접 부딪히며 이해할 수 있었고, 컴포넌트 간 상태 공유 문제를 해결하면서 초기 설계와 데이터 흐름의 중요성을 깨달았습니다. 외부 AI API 장애 상황에서 대안을 찾아 전환하는 과정을 통해 실제 서비스 개발에서의 유연한 대처 능력을 키울 수 있었습니다. 5인 팀 프로젝트로 브랜치 전략을 활용한 협업을 경험하며 사전 인터페이스 정의와 소통의 중요성을 배웠습니다."
+        },
+        {
+                "title": "EduFind",
+                "thumb": "./imgs/img-EduFind.jpg",
+                "simple_intro": "학원 · 자격증 통합 검색 플랫폼",
+                "intro": "EduFind는 학원과 자격증 정보를 통합 검색할 수 있는 플랫폼입니다. 카테고리·지역·수강료 필터로 원하는 학원을 빠르게 찾고, 로그인 후 하트 버튼으로 찜 목록을 관리할 수 있습니다.",
+                "url": "https://edufind-th.vercel.app/",
+                "github": "https://github.com/dl-xogus/EduFind",
+                "period": "2026.05.14 ~ 2026.06.02",
+                "team": "개인 프로젝트",
+                "contri": {
+                        "development": "100",
+                        "design": "100",
+                        "planning": "100"
+                },
+                "stack": [
+                        {
+                                "name": "Next.js",
+                                "icon": "./imgs/ic-nextjs.svg"
+                        },
+                        {
+                                "name": "SCSS",
+                                "icon": "./imgs/ic-scss.svg"
+                        },
+                        {
+                                "name": "TypeScript",
+                                "icon": "./imgs/ic-typescript.svg"
+                        },
+                        {
+                                "name": "MongoDB Atlas",
+                                "icon": "./imgs/ic-mongodb.svg"
+                        },
+                        {
+                                "name": "Axios",
+                                "icon": "./imgs/ic-axios.svg"
+                        },
+                        {
+                                "name": "Zustand",
+                                "icon": "./imgs/ic-zustand.svg"
+                        },
+                        {
+                                "name": "GitHub",
+                                "icon": "./imgs/ic-github.svg"
+                        },
+                        {
+                                "name": "Git",
+                                "icon": "./imgs/ic-git.svg"
+                        },
+                        {
+                                "name": "Figma",
+                                "icon": "./imgs/ic-figma.svg"
+                        },
+                        {
+                                "name": "Vercel",
+                                "icon": "./imgs/ic-vercel.svg"
+                        }
+                ],
+                "func": [
+                        {
+                                "func_name": "학원 · 자격증 통합 검색",
+                                "detail": "키워드 입력 시 학원명·자격증명 동시 검색 및 자동완성 드롭다운 제공"
+                        },
+                        {
+                                "func_name": "카테고리 · 지역 · 수강료 필터링",
+                                "detail": "분야·지역·수강료 구간 복합 필터 적용 및 태그로 표시·제거"
+                        },
+                        {
+                                "func_name": "학원 상세 정보 (위치, 운영시간, 수강료, 연관 자격증)",
+                                "detail": "주소·운영시간·수강료·연관 자격증 목록 표시"
+                        },
+                        {
+                                "func_name": "자격증 상세 정보 (난이도, 합격률, 시험 일정, 연관 학원)",
+                                "detail": "난이도·합격률·시험 일정·연관 학원 목록 표시"
+                        },
+                        {
+                                "func_name": "회원가입 · 로그인",
+                                "detail": "이메일 기반 인증, bcrypt 암호화 후 DB 저장, 로그인 상태 localStorage 유지"
+                        },
+                        {
+                                "func_name": "찜 기능",
+                                "detail": "로그인 유저 전용, 학원·자격증 찜 토글 시 DB 즉시 반영"
+                        },
+                        {
+                                "func_name": "찜 목록 페이지",
+                                "detail": "찜한 항목을 학원·자격증 탭으로 분리하여 목록 표시"
+                        }
+                ],
+                "issue": [
+                        {
+                                "problem": "axios로 API를 호출하면 응답 data의 타입이 any로 추론되어 이후 코드에서 자동완성이 안 되고 타입 에러가 계속 발생했습니다.",
+                                "solving": "axios 제네릭에 응답 타입을 직접 지정해 해결했습니다. API 응답 구조에 맞는 인터페이스를 정의하고 axios.get<T>() 형태로 전달하면 data 속성까지 타입이 정확히 추론됩니다."
+                        },
+                        {
+                                "problem": "로그인 후 페이지를 새로고침하면 로그인 상태가 풀려 헤더의 유저 메뉴가 사라지고 다시 로그인해야 했습니다.",
+                                "solving": "Zustand 내장 persist 미들웨어를 적용해 store 상태를 localStorage에 자동으로 저장하고 복원하도록 했습니다. 비밀번호 같은 민감한 정보는 store에서 제외하고 이름과 이메일만 유지했습니다."
+                        },
+                        {
+                                "problem": "input onChange 핸들러에서 e.target.value를 사용하려 하자 \"Property 'value' does not exist on type 'EventTarget'\" 에러가 발생했습니다.",
+                                "solving": "React.ChangeEvent<HTMLInputElement>를 인자 타입으로 명시해 해결했습니다."
+                        }
+                ],
+                "think": "첫 TypeScript 프로젝트로, 초반에는 타입 에러와 씨름하는 시간이 많았습니다. any로 때우고 싶은 순간마다 제대로 된 타입을 찾아 적용하다 보니, 타입 시스템이 버그를 미리 잡아주는 도구라는 것을 코드로 직접 체감했습니다. 불편함을 감수하며 익힌 만큼, TypeScript 없이는 작업하기 어렵겠다는 확신이 생긴 프로젝트였습니다."
         }
 ]
