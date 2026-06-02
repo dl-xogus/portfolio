@@ -61,7 +61,20 @@ providers.forEach((p) => {
 `,
 
     code4: `const text = result.response.text().replace(/\`\`\`json|\`\`\`/g, '').trim();
-const jsonMatch = text.match(/\{(?:[^{}]|{[^{}]*})*\}/);`
+const jsonMatch = text.match(/\{(?:[^{}]|{[^{}]*})*\}/);`,
+
+    code5: `import { persist } from 'zustand/middleware'
+
+export const useAuthStore = create(
+  persist(
+    (set) => ({
+      user: null as User | null,
+      setUser: (user: User) => set({ user }),
+      logout: () => set({ user: null }),
+    }),
+    { name: 'auth' }  // localStorage 키 이름
+  )
+)`
   };
 
   const items = [
@@ -177,6 +190,29 @@ const jsonMatch = text.match(/\{(?:[^{}]|{[^{}]*})*\}/);`
         </div>
       )
     },
+    {
+      title: "\"새로고침 시 로그인 상태 초기화 문제\"",
+      문제상황: (
+          <p>로그인 후 페이지를 새로고침하면 로그인 상태가 풀려 헤더의 유저 메뉴가 사라지고 다시 로그인해야 했습니다.</p>
+      ),
+      원인분석: (
+          <p>Zustand store는 메모리에만 존재하기 때문에 새로고침 시 초기 상태로 리셋됩니다. 별도의 영속화 처리 없이는 세션을 유지할 수 없습니다.</p>
+      ),
+      해결방법: (
+        <div>
+          <p>Zustand 내장 persist 미들웨어를 적용해 store 상태를 localStorage에 자동으로 저장하고 복원하도록 했습니다. 비밀번호 같은 민감한 정보는 store에서 제외하고 이름과 이메일만 유지했습니다.</p>
+          <SyntaxHighlighter language="javascript" style={vscDarkPlus}>
+            {codes.code5}
+          </SyntaxHighlighter>
+        </div>
+      ),
+      결과: (
+        <div>
+          <p>코드블록 제거 + 정규식 추출 + 3회 재시도 조합으로 파싱 실패 에러를 해결했습니다.</p>
+          <p>AI 모델마다 JSON 출력 제어 방식이 다르기 때문에 모델 선택 시 구조화된 출력 지원 여부를 먼저 확인해야 한다는 것을 배웠고, 프롬프트로 형식을 강제해도 모델이 어길 수 있으므로, AI 응답은 항상 정제 후 파싱하는 방어적 설계가 필요하다는 것을 배웠습니다.</p>
+        </div>
+      )
+    }
   ];
 
 
