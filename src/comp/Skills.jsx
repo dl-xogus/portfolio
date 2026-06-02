@@ -7,8 +7,9 @@ function Skills() {
             item: [
                 { name: "HTML5", icon: "./imgs/ic-html.svg" },
                 { name: "CSS3", icon: "./imgs/ic-css.svg" },
-                { name: "Javascript", icon: "./imgs/ic-javascript.svg" },
-                { name: "React.js", icon: "./imgs/ic-react.svg" },
+                { name: "JavaScript", icon: "./imgs/ic-javascript.svg" },
+                { name: "TypeScript", icon: "./imgs/ic-typescript.svg" },
+                { name: "React", icon: "./imgs/ic-react.svg" },
                 { name: "Next.js", icon: "./imgs/ic-nextjs.svg" },
                 { name: "Vue", icon: "./imgs/ic-vue.svg" }
             ]
