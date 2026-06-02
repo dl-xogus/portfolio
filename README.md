@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+# 웹 포트폴리오
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+HTML 코드 · 터미널 컨셉의 React 기반 개발자 포트폴리오
 
-## Available Scripts
+## 🌐 배포
 
-In the project directory, you can run:
+> 현재 배포 링크 없음 (로컬 실행)
 
-### `npm start`
+## 📌 프로젝트 소개
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+HTML 태그 구조와 터미널 인터페이스를 컨셉으로 제작한 React 기반 웹 포트폴리오입니다.  
+개발자의 작업 환경을 시각적으로 표현하고, 다양한 인터랙션을 통해 프로젝트와 개발 경험을 소개합니다.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 주요 기능
+- 🖥 HTML 코드 구조 형태의 UI 레이아웃
+- 💻 터미널 기반 Contact 기능 (`help`, `info`, `phone`, `email`, `github` 명령어 지원)
+- 📁 프로젝트 목록 및 상세 정보 인터랙션
+- ⌨️ 단축키 지원 (`Ctrl+J` 터미널 토글 / `Ctrl+B` 프로젝트 상세 토글)
 
-### `npm test`
+## 🛠 기술 스택
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<table>
+  <thead>
+    <tr>
+      <th>사용기술</th>
+      <th>설명</th>
+      <th>Badge</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>React.js</td>
+      <td>컴포넌트 기반 UI 구성</td>
+      <td><img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black"></td>
+    </tr>
+    <tr>
+      <td>SCSS</td>
+      <td>컴포넌트별 스타일 관리</td>
+      <td><img src="https://img.shields.io/badge/SCSS-CC6699?style=flat-square&logo=sass&logoColor=white"></td>
+    </tr>
+    <tr>
+      <td>Figma</td>
+      <td>UI/UX 디자인</td>
+      <td><img src="https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white"></td>
+    </tr>
+    <tr>
+      <td>GitHub / Git</td>
+      <td>버전 관리</td>
+      <td><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white"></td>
+    </tr>
+  </tbody>
+</table>
 
-### `npm run build`
+## 📆 기간 및 인원
+- 2026.03.27 ~ 진행중
+- 개인 프로젝트
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📂 프로젝트 구조
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+📂src/
+┣━━ 📂comp/
+┃   ┣━━ 📄Header.jsx          # 상단 헤더
+┃   ┣━━ 📄BodyTagLine.jsx     # HTML 태그 컨셉 레이아웃 (전체 섹션 포함)
+┃   ┣━━ 📄Hero.jsx            # 자기소개 섹션
+┃   ┣━━ 📄About.jsx           # About 섹션
+┃   ┣━━ 📄Skills.jsx          # 기술 스택 섹션
+┃   ┣━━ 📄Projects.jsx        # 프로젝트 목록 섹션
+┃   ┣━━ 📄ProjectsDetails.jsx # 프로젝트 상세 정보 패널
+┃   ┣━━ 📄ProblemSolving.jsx  # 문제 해결 경험 섹션
+┃   ┣━━ 📄Terminal.jsx        # 터미널 인터페이스 (Contact)
+┃   └━━ 📄Contact.jsx         # Contact 섹션
+┣━━ 📂css/                    # 각 컴포넌트별 SCSS 파일
+┣━━ 📄projects.json           # 프로젝트 데이터
+┣━━ 📄App.jsx                 # 루트 컴포넌트 (터미널·상세 패널 상태 관리)
+└━━ 📄index.js
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ⌨️ 단축키
 
-### `npm run eject`
+| 단축키 | 기능 |
+|--------|------|
+| `Ctrl + J` | 터미널 창 토글 |
+| `Ctrl + B` | 프로젝트 상세 패널 토글 |
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 💻 터미널 명령어
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| 명령어 | 설명 |
+|--------|------|
+| `help` | 사용 가능한 명령어 목록 출력 |
+| `info` | 기본 연락처 정보 출력 |
+| `phone` | 전화번호 출력 |
+| `email` | 이메일 출력 |
+| `github` | GitHub 링크 출력 |
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🚀 시작하기
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+npm install
+npm start
+```
