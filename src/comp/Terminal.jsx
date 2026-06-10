@@ -38,6 +38,7 @@ function Terminal({ setShowTerminal }) {
                 <p>Name : Lee Taehyeon</p>
                 <p>Role : Frontend Developer</p>
                 <p>Birth : 1999.12.28</p>
+                <p className="imgWrap"><img src="./imgs/img-photo.jpg" alt="증명사진" /></p>
             </div>
         ),
 
@@ -80,6 +81,7 @@ function Terminal({ setShowTerminal }) {
                         <p>: <a className="ter-link" href="https://github.com/dl-xogus" target="_blank" rel="noreferrer">https://github.com/dl-xogus</a></p>
                     </div>
                 </div>
+                <p className="imgWrap"><img src="./imgs/img-photo.jpg" alt="증명사진" /></p>
             </div>
         )
     };

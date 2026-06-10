@@ -44,7 +44,7 @@
             .btn {
                 cursor: pointer;
 
-                
+
             }
         }
     }
@@ -136,6 +136,15 @@
                     display: flex;
                     gap: 20px;
                     padding-top: 20px;
+                }
+            }
+
+            .imgWrap {
+                width: 100px;
+                padding: 10px 0;
+
+                >img {
+                    width: 100%;
                 }
             }
         }

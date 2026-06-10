@@ -19,6 +19,38 @@
     }
 }
 
+.imgWrap {
+    width: 100px;
+
+    > img {
+        width: 100%;
+    }
+}
+
+.img-tag {
+    display: flex;
+}
+
+.altImgalt {
+    display: flex;
+}
+
+.src {
+    color: #9CDCFE;
+}
+
+.equal {
+    color: #cccccc;
+}
+
+.alt {
+    color: #CE9178;
+}
+
+.src-alt {
+    padding-left: 10px;
+}
+
 @media (max-width: 1239px) {
     .details {
         max-width: 1000px;
