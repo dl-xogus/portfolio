@@ -20,8 +20,19 @@
 }
 
 .imgWrap {
-    width: 100px;
+    width: 150px !important;
+    height: 150px;
+    border-radius: 9999px;
+    overflow: hidden;
 
+    > img {
+        width: 100%;
+    }
+}
+
+.img-wrap {
+    width: 120px;
+    padding: 10px 0;
     > img {
         width: 100%;
     }
