@@ -6,6 +6,15 @@
     border-top: 1px solid #454545;
     bottom: 0;
 
+    .profile {
+        width: 120px;
+        padding: 10px 0;
+
+        >img {
+            width: 100%;
+        }
+    }
+
     .ter-topbar {
         width: 100%;
         background-color: #181818;

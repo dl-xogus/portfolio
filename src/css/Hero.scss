@@ -1,5 +1,5 @@
 .hero {
-    margin: 200px auto;
+    margin: 100px auto;
     position: relative;
 }
 
@@ -30,13 +30,7 @@
     }
 }
 
-.img-wrap {
-    width: 120px;
-    padding: 10px 0;
-    > img {
-        width: 100%;
-    }
-}
+
 
 .img-tag {
     display: flex;

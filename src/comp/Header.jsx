@@ -38,24 +38,34 @@ function Header() {
   };
 
   useEffect(() => {
-    const sections = document.querySelectorAll(".part");
+    const handleScroll = () => {
+      const sections = document.querySelectorAll(".part");
+      const headerHeight = document.querySelector("header")?.offsetHeight ?? 0;
+      let current = "";
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      {
-        threshold: 0.5    // 50% 이상 보일 때
+      sections.forEach((section) => {
+        if (section.getBoundingClientRect().top <= headerHeight + 1) {
+          current = section.id;
+        }
+      });
+
+      if (window.scrollY <= 50) {
+        current = sections[0]?.id ?? current;
       }
-    );
 
-    sections.forEach((section) => observer.observe(section));
+      const isAtBottom =
+        window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 50;
+      if (isAtBottom && sections.length > 0) {
+        current = sections[sections.length - 1].id;
+      }
 
-    return () => observer.disconnect();
+      setActiveSection(current);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (

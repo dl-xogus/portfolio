@@ -62,7 +62,7 @@ function Hero() {
               </p>
             </div>
 
-            <p className='tag img-tag'>
+            <div className='tag img-tag'>
               <div>
                 <span>{'<'}<span className='angle'>img</span></span>
                 <span className='src'> src</span>
@@ -70,7 +70,7 @@ function Hero() {
               </div>
               <div className='altImgalt'>
                 <span className='alt'>"</span>
-                <p className='imgWrap'><img src="./imgs/img-photo.jpg" alt="증명사진" /></p>
+                <div className='imgWrap'><img src="./imgs/img-photo.jpg" alt="증명사진" /></div>
                 <span className='alt'>"</span>
               </div>
               <div className='src-alt'>
@@ -79,7 +79,7 @@ function Hero() {
                 <span className='alt'>"이태현"</span>
                 <span>{' />'}</span>
               </div>
-            </p>
+            </div>
           </div>
         </article>
 
