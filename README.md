@@ -94,10 +94,3 @@ HTML 태그 구조와 터미널 인터페이스를 컨셉으로 제작한 React 
 | `phone` | 전화번호 출력 |
 | `email` | 이메일 출력 |
 | `github` | GitHub 링크 출력 |
-
-## 🚀 시작하기
-
-```bash
-npm install
-npm start
-```
