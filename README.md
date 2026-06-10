@@ -1,3 +1,5 @@
+<img src="public/imgs/img-portfolio.jpg" alt="썸네일" />
+
 # 웹 포트폴리오
 
 HTML 코드 · 터미널 컨셉의 React 기반 개발자 포트폴리오
