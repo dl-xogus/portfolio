@@ -50,6 +50,11 @@ HTML 태그 구조와 터미널 인터페이스를 컨셉으로 제작한 React 
       <td>버전 관리</td>
       <td><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white"></td>
     </tr>
+    <tr>
+      <td>Vercel</td>
+      <td>배포</td>
+      <td><img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white"></td>
+    </tr>
   </tbody>
 </table>
 
